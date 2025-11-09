@@ -7,7 +7,7 @@ import { Install } from "../src/utility/Install"
 
 XTest.Test("Install Toolchains", async () => {
     XFile.DeleteDirectory(XEnv.LocalPath)
-    await Install.Process(["--protoc=30.2"])
+    await Install.Process(["--protoc=30.2", "--gitproxy=https://ghproxy.cn/"])
 
     XFile.DeleteDirectory(XEnv.LocalPath)
     await Install.Process(["--all"])
