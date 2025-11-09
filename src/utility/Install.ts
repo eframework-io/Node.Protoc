@@ -76,10 +76,10 @@ export namespace Install {
                 if (!url) throw new Error(`Unsupported platform: ${bin}. Was not able to find a proper version.`)
 
                 const tz = Intl.DateTimeFormat().resolvedOptions().timeZone.toLocaleLowerCase()
-                if (XString.Contains(tz, "shanghai") || args.has("gitproxy")) {
-                    url = `${gitproxy.endsWith("/") ? gitproxy : gitproxy + "/"}${url}`
-                    XLog.Debug(`Install.Protoc: using git proxy of ${gitproxy}.`)
-                }
+                // if (XString.Contains(tz, "shanghai") || args.has("gitproxy")) {
+                //     url = `${gitproxy.endsWith("/") ? gitproxy : gitproxy + "/"}${url}`
+                //     XLog.Debug(`Install.Protoc: using git proxy of ${gitproxy}.`)
+                // }
                 XLog.Debug(`Install.Protoc: fetch from ${url}.`)
 
                 XFile.DeleteDirectory(dir)
@@ -258,10 +258,10 @@ export namespace Install {
                 if (!url) throw new Error(`Unsupported platform: ${bin}. Was not able to find a proper version.`)
 
                 const tz = Intl.DateTimeFormat().resolvedOptions().timeZone.toLocaleLowerCase()
-                if (XString.Contains(tz, "shanghai") || args.has("gitproxy")) {
-                    url = `${gitproxy.endsWith("/") ? gitproxy : gitproxy + "/"}${url}`
-                    XLog.Debug(`Install.JSTool(protoc-gen-js): using git proxy of ${gitproxy}.`)
-                }
+                // if (XString.Contains(tz, "shanghai") || args.has("gitproxy")) {
+                //     url = `${gitproxy.endsWith("/") ? gitproxy : gitproxy + "/"}${url}`
+                //     XLog.Debug(`Install.JSTool(protoc-gen-js): using git proxy of ${gitproxy}.`)
+                // }
                 XLog.Debug(`Install.JSTool(protoc-gen-js): fetch from ${url}.`)
 
                 const dir = XFile.PathJoin(XEnv.LocalPath, "protobuf-javascript")
@@ -326,10 +326,10 @@ export namespace Install {
                 if (!url) throw new Error(`Unsupported platform: ${bin}. Was not able to find a proper version.`)
 
                 const tz = Intl.DateTimeFormat().resolvedOptions().timeZone.toLocaleLowerCase()
-                if (XString.Contains(tz, "shanghai") || args.has("gitproxy")) {
-                    url = `${gitproxy.endsWith("/") ? gitproxy : gitproxy + "/"}${url}`
-                    XLog.Debug(`Install.JSTool(protoc-gen-grpc-web): using git proxy of ${gitproxy}.`)
-                }
+                // if (XString.Contains(tz, "shanghai") || args.has("gitproxy")) {
+                //     url = `${gitproxy.endsWith("/") ? gitproxy : gitproxy + "/"}${url}`
+                //     XLog.Debug(`Install.JSTool(protoc-gen-grpc-web): using git proxy of ${gitproxy}.`)
+                // }
                 XLog.Debug(`Install.JSTool(protoc-gen-grpc-web): fetch from ${url}.`)
 
                 const file = XFile.PathJoin(XEnv.LocalPath, process.platform === "win32" ? "protoc-gen-grpc-web.exe" : "protoc-gen-grpc-web")
