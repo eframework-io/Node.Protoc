@@ -2,7 +2,7 @@
   "name": "io.eframework.node.protoc",
   "displayName": "EFramework Protoc for Node",
   "description": "简化了 Protocol Buffers 和 gRPC 工具链的安装与使用。",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "author": {
     "name": "EFramework Innovation",
