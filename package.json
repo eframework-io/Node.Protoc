@@ -36,18 +36,18 @@
     "LICENSE"
   ],
   "dependencies": {
-    "io.eframework.unite.utility": "0.1.0",
     "follow-redirects": "1.15.9",
     "google-protobuf": "3.21.4",
     "grpc-web": "1.5.0",
+    "io.eframework.unite.utility": "0.1.0",
     "protobufjs": "7.4.0"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "8.4.0",
+    "@types/follow-redirects": "1.14.4",
     "@types/google-protobuf": "3.15.12",
     "@types/jest": "27.5.2",
     "@types/node": "16.11.7",
-    "@types/follow-redirects": "1.14.4",
     "jest": "27.2.0",
     "rollup": "2.79.1",
     "rollup-plugin-clear": "2.0.7",
@@ -60,7 +60,7 @@
   "scripts": {
     "debug": "rm -rf dist && rm -rf tests/dist && rollup -c",
     "release": "rm -rf dist && rm -rf tests/dist && rollup -c --mode=production",
-    "test": "npm run release && (npm link || true) && jest --coverage --runInBand",
+    "test": "npm run release && npm link --force && npm install -g io.eframework.node.protoc && jest --coverage --runInBand; npm uninstall -g io.eframework.node.protoc || true; npm unlink io.eframework.node.protoc || true",
     "prepublishOnly": "npm install && npm run release"
   }
 }
