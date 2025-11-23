@@ -55,7 +55,7 @@ export namespace Install {
         } else {
             const version = args.get("protoc") ? args.get("protoc") : "30.2"
 
-            const gitproxy = args.get("gitproxy") ? args.get("gitproxy") : "https://ghproxy.cn/"
+            const gitproxy = args.get("gitproxy") ? args.get("gitproxy") : "https://ghproxy.net/"
 
             const binurl = {
                 "win32_x86_32": `https://github.com/protocolbuffers/protobuf/releases/download/v${version}/protoc-${version}-win32.zip`,
@@ -76,7 +76,7 @@ export namespace Install {
                 if (!url) throw new Error(`Unsupported platform: ${bin}. Was not able to find a proper version.`)
 
                 const tz = Intl.DateTimeFormat().resolvedOptions().timeZone.toLocaleLowerCase()
-                if ((XString.Contains(tz, "shanghai") || args.has("gitproxy")) && process.env.GITHUB_ACTIONS == null) {
+                if (XString.Contains(tz, "shanghai") || args.has("gitproxy")) {
                     url = `${gitproxy.endsWith("/") ? gitproxy : gitproxy + "/"}${url}`
                     XLog.Debug(`Install.Protoc: using git proxy of ${gitproxy}.`)
                 }
@@ -240,7 +240,7 @@ export namespace Install {
         if (XFile.HasFile(genJSVerLocal) && !args.get("protoc-gen-js")) {
             XLog.Debug(`JSTool(protoc-gen-js): @${XFile.OpenText(genJSVerLocal)}`)
         } else {
-            const gitproxy = args.get("gitproxy") ? args.get("gitproxy") : "https://ghproxy.cn/"
+            const gitproxy = args.get("gitproxy") ? args.get("gitproxy") : "https://ghproxy.net/"
             const binurl = {
                 "win32_x86_64": `https://github.com/protocolbuffers/protobuf-javascript/releases/download/v${genJSVer}/protobuf-javascript-${genJSVer}-win64.zip`,
                 "linux_x86_32": `https://github.com/protocolbuffers/protobuf-javascript/releases/download/v${genJSVer}/protobuf-javascript-${genJSVer}-linux-x86_32.zip`,
@@ -258,7 +258,7 @@ export namespace Install {
                 if (!url) throw new Error(`Unsupported platform: ${bin}. Was not able to find a proper version.`)
 
                 const tz = Intl.DateTimeFormat().resolvedOptions().timeZone.toLocaleLowerCase()
-                if ((XString.Contains(tz, "shanghai") || args.has("gitproxy")) && process.env.GITHUB_ACTIONS == null) {
+                if (XString.Contains(tz, "shanghai") || args.has("gitproxy")) {
                     url = `${gitproxy.endsWith("/") ? gitproxy : gitproxy + "/"}${url}`
                     XLog.Debug(`Install.JSTool(protoc-gen-js): using git proxy of ${gitproxy}.`)
                 }
@@ -306,7 +306,7 @@ export namespace Install {
         if (XFile.HasFile(genGRpcWebVerLocal) && !args.get("protoc-gen-grpc-web")) {
             XLog.Debug(`JSTool(protoc-gen-grpc-web): @${XFile.OpenText(genGRpcWebVerLocal)}`)
         } else {
-            const gitproxy = args.get("gitproxy") ? args.get("gitproxy") : "https://ghproxy.cn/"
+            const gitproxy = args.get("gitproxy") ? args.get("gitproxy") : "https://ghproxy.net/"
 
             const binurl = {
                 "win32_x86_32": `https://github.com/grpc/grpc-web/releases/download/${genGRpcWebVer}/protoc-gen-grpc-web-${genGRpcWebVer}-windows-x86_64.exe`,
@@ -326,7 +326,7 @@ export namespace Install {
                 if (!url) throw new Error(`Unsupported platform: ${bin}. Was not able to find a proper version.`)
 
                 const tz = Intl.DateTimeFormat().resolvedOptions().timeZone.toLocaleLowerCase()
-                if ((XString.Contains(tz, "shanghai") || args.has("gitproxy")) && process.env.GITHUB_ACTIONS == null) {
+                if (XString.Contains(tz, "shanghai") || args.has("gitproxy")) {
                     url = `${gitproxy.endsWith("/") ? gitproxy : gitproxy + "/"}${url}`
                     XLog.Debug(`Install.JSTool(protoc-gen-grpc-web): using git proxy of ${gitproxy}.`)
                 }

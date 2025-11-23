@@ -43,7 +43,7 @@ protox [options]
   - --protoc-gen-js=<ver>：protoc-gen-js 工具版本，默认：3.21.4
   - --protoc-gen-web-grpc=<ver>：protoc-gen-web-grpc 工具版本，默认：1.5.0
   - --protoc-gen-ts=<ver>：protoc-gen-ts 工具版本，默认：latest
-  - --gitproxy=<url>：git 代理地址，默认：https://ghproxy.cn/
+  - --gitproxy=<url>：git 代理地址，默认：https://ghproxy.net/，可选：https://ghfast.top/
   - --goproxy=<url>：go 代理地址，默认：https://goproxy.cn,direct
   - --npmproxy=<url>：npm 代理地址，默认：https://registry.npmmirror.com/
 - --xxx_out：与原生工具参数相同
