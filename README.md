@@ -1,4 +1,4 @@
-# EFramework Protoc for Node
+# EFramework Protoc Tools
 
 [![NPM](https://img.shields.io/npm/v/io.eframework.node.protoc?label=NPM&logo=npm)](https://www.npmjs.com/package/io.eframework.node.protoc)
 [![DeepWiki](https://img.shields.io/badge/DeepWiki-Explore-blue)](https://deepwiki.com/eframework-io/Node.Protoc)

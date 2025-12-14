@@ -1,5 +1,9 @@
 # 更新记录
 
+## [0.3.0] - 
+### 变更
+- 修改产品名称为 EFramework Protoc Tools
+
 ## [0.2.0] - 2025-11-23
 ### 变更
 - 修改 gitproxy 的默认地址 https://ghproxy.cn -> https://ghproxy.net

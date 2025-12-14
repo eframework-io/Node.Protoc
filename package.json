@@ -1,6 +1,6 @@
 {
   "name": "io.eframework.node.protoc",
-  "displayName": "EFramework Protoc for Node",
+  "displayName": "EFramework Protoc Tools",
   "description": "简化了 Protocol Buffers 和 gRPC 工具链的安装与使用。",
   "version": "0.1.0",
   "license": "MIT",
